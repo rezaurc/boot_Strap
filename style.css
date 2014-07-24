@@ -1,0 +1,601 @@
+/*
+Theme Name: boot_Strap
+Theme URI: http://gratis.rezaur.net
+Author: Rezaur Chowdhury
+Author URI: http://www.rezaur.com
+Description: Theme is based on _s by Auttomatic. I just got it married with twitter bootstrap 3.
+Version: 1.0.1
+License: GNU General Public License
+License URI: license.txt
+Text Domain: boot_Strap
+Domain Path: /languages/
+Tags: _S, bootstrap, fluid width
+
+This theme, like WordPress, is licensed under the GPL.
+
+/* Alignment */
+*{
+    border-radius: 0 !important;
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* Clearing */
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+
+/* Menu */
+
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	display: none;
+	float: left;
+	left: 0;
+	position: absolute;
+	top: 1.5em;
+	z-index: 99999;
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	width: 200px;
+}
+.main-navigation ul ul li {
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+.main-navigation .current_page_item a,
+.main-navigation .current-menu-item a {
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+
+/* Content */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.byline,
+.updated {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+/* Asides */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* Media */
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-main .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-main .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-main .gallery dd {
+	margin: 0;
+}
+.site-main .gallery-columns-4 .gallery-item {
+}
+.site-main .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* Navigation */
+
+.site-main [class*="navigation"] {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+[class*="navigation"] .nav-previous {
+	float: left;
+	width: 50%;
+}
+[class*="navigation"] .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+
+/* Comments */
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+}
+
+
+/* Widgets*/
+
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+/* Entry Meta */
+
+.entry-meta {
+	clear: both;
+	font-size: 14px;
+}
+
+.entry-meta a {
+	color: #bc360a;
+}
+
+.entry-meta a:hover {
+	color: #bc360a;
+}
+
+.entry-meta > span {
+	margin-right: 20px;
+}
+
+.entry-meta > span:last-child {
+	margin-right: 0;
+}
+
+.featured-post:before {
+	content: "\f308";
+	margin-right: 2px;
+}
+
+.entry-meta .date a:before {
+	content: "\f303";
+}
+
+.comments-link a:before {
+	content: "\f300";
+	margin-right: 2px;
+	position: relative;
+	top: -1px;
+}
+
+.entry-meta .author a:before {
+	content: "\f304";
+	position: relative;
+	top: -1px;
+}
+
+.categories-links a:first-child:before {
+	content: "\f301";
+}
+
+.tags-links a:first-child:before {
+	content: "\f302";
+	position: relative;
+	top: -1px;
+}
+
+.edit-link a:before {
+	content: "\f411";
+	position: relative;
+	top: -1px;
+}
+
+.single-author .entry-meta .author,
+.sticky.format-standard .entry-meta .date,
+.sticky.format-audio .entry-meta .date,
+.sticky.format-chat .entry-meta .date,
+.sticky.format-image .entry-meta .date,
+.sticky.format-gallery .entry-meta .date {
+	display: none;
+}
+
+/* Attachments */
+
+.attachment .hentry {
+	background-color: #e8e5ce;
+	margin: 0;
+	padding: 0;
+}
+
+.attachment .entry-header {
+	margin-bottom: 0;
+	max-width: 1040px;
+	padding: 30px 0;
+}
+
+.attachment .entry-title {
+	display: inline-block;
+	float: left;
+	font: 300 italic 30px "Source Sans Pro", Helvetica, sans-serif;
+	margin: 0;
+}
+
+.attachment .entry-title:before {
+	content: "\f416";
+	font-size: 32px;
+	margin-right: 10px;
+}
+
+.attachment .entry-meta {
+	clear: none;
+	color: inherit;
+	float: right;
+	max-width: 604px;
+	padding: 9px 0 0;
+	text-align: right;
+}
+
+.hentry.attachment:not(.image-attachment) .entry-meta {
+	max-width: 104px;
+}
+
+.attachment footer.entry-meta {
+	display: none;
+}
+
+.attachment-meta:before {
+	content: "\f307";
+}
+
+.full-size-link a:before {
+	content: "\f402";
+}
+
+.full-size-link:before {
+	content: none;
+}
+
+.attachment .entry-meta a,
+.attachment .entry-meta .edit-link:before,
+.attachment .full-size-link:before {
+	color: #ca3c08;
+}
+
+.attachment .entry-content {
+	background-color: #fff;
+	max-width: 100%;
+	padding: 40px 0;
+}
+
+.image-navigation {
+	margin: 0 auto;
+	max-width: 1040px;
+	position: relative;
+}
+
+.image-navigation a:hover {
+	text-decoration: none;
+}
+
+.image-navigation .nav-previous,
+.image-navigation .nav-next {
+	position: absolute;
+	top: 50px;
+}
+
+.image-navigation .nav-previous {
+	left: 0;
+}
+
+.image-navigation .nav-next {
+	right: 0;
+}
+
+.image-navigation .meta-nav {
+	font-size: 32px;
+	font-weight: 300;
+	vertical-align: -4px;
+}
+
+.attachment .entry-attachment,
+.attachment .type-attachment p {
+	margin: 0 auto;
+	max-width: 724px;
+	text-align: center;
+}
+
+.attachment .entry-attachment .attachment {
+	display: inline-block;
+}
+
+.attachment .entry-caption {
+	text-align: left;
+}
+
+.attachment .entry-description {
+	margin: 20px auto 0;
+	max-width: 604px;
+}
+
+.attachment .entry-caption p:last-child,
+.attachment .entry-description p:last-child {
+	margin: 0;
+}
+
+.attachment .site-main .sidebar-container {
+	display: none;
+}
+
+.attachment .entry-content .mejs-audio {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.attachment .entry-content .wp-video {
+	margin: 0 auto;
+}
+
+.attachment .entry-content .mejs-container {
+	margin-bottom: 24px;
+}
+/* Author Bio */
+
+.author-info {
+	margin: 0 auto;
+	max-width: 604px;
+	padding: 30px 0 10px;
+	text-align: left; /* gallery & video post formats */
+	width: 100%;
+}
+
+.author.sidebar .author-info {
+	max-width: 1040px;
+	padding: 30px 376px 10px 60px;
+}
+
+.single .author-info {
+	padding: 50px 0 0;
+}
+
+.author-avatar .avatar {
+	float: left;
+	margin: 0 30px 30px 0;
+}
+
+.single-format-status .author-description {
+	color: #f7f5e7;
+}
+
+.author-description .author-title {
+	clear: none;
+	font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
+	margin: 0 0 8px;
+}
+
+.author-link {
+	color: #ca3c08;
+	margin-left: 2px;
+}
+
+.author.archive .author-link {
+	display: none;
+}
+/* 404 */
+
+.error404 .page-header {
+	background-color: #fff;
+}
+
+.error404 .page-title {
+	line-height: 0.6;
+	margin: 0;
+	padding: 300px;
+	position: relative;
+	text-align: center;
+	width: auto;
+}
+
+.error404 .page-title:before {
+	color: #e8e5ce;
+	content: "\f423";
+	font-size: 964px;
+	line-height: 0.6;
+	overflow: hidden;
+	position: absolute;
+	left: 7px;
+	top: 28px;
+}
+
+.error404 .page-wrapper {
+	background-color: #e8e5ce;
+}
+
+.error404 .page-header,
+.error404 .page-content {
+	margin: 0 auto;
+	max-width: 1040px;
+	padding-bottom: 40px;
+	width: 100%;
+}
+
+/* =Infinite Scroll
+----------------------------------------------- */
+
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+/*---------------------------------Comment block-------------------------------------------------*/
+.form-allowed-tags code{
+    clear:both;
+    white-space: pre-wrap;
+    display: block;
+}
+
+/*==================Project Archive Page=============================================*/
+body.post-type-archive-projects{
+    padding-bottom: 70px;
+}
+/*==================Project Archive Page Ends========================================*/
