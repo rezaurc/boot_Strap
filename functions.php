@@ -52,6 +52,9 @@ if (!function_exists('boot_Strap_setup')) :
         // Enable support for Post Formats.
         add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
 
+        // This theme styles the visual editor to resemble the theme style.
+	add_editor_style( array( 'css/wp-editor-style.css') );
+        
         // Setup the WordPress core custom background feature.
         add_theme_support('custom-background', apply_filters('boot_Strap_custom_background_args', array(
             'default-color' => 'ffffff',
