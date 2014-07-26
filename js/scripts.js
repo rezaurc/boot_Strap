@@ -18,14 +18,14 @@
 
 //GLOBALS
 
-//document.write("<style>body{display:none;}</style>");
+
 jQuery(document).ready(function () {    
     //Remove info/warning bar after 15 sec
     setTimeout( "jQuery('.alert-warning').fadeOut('slow');",15000 );
 
     var $ = jQuery;
     //menu
-        $( ".menu-item-has-children" ).mouseover(function(event) {
+    /*    $( ".menu-item-has-children" ).mouseover(function(event) {
         // stop bootstrap.js to hide the parents
         event.stopPropagation();
         // hide the open children
@@ -39,7 +39,7 @@ jQuery(document).ready(function () {
     $( ".menu-item-has-children" ).mouseout(function(event) {
          event.stopPropagation();
          $( this ).parents(".dropdown").removeClass('open');
-    });
+    });*/
     
     $( 'input.search-field' ).addClass( 'form-control' );
     $( '.comment-reply-link' ).addClass( 'btn btn-primary' );
@@ -51,8 +51,9 @@ jQuery(document).ready(function () {
     $( '.widget_recent_comments ul#recentcomments' ).css( 'list-style', 'none').css( 'padding-left', '0' );
     $( '.widget_recent_comments ul#recentcomments li' ).css( 'padding', '5px 15px');
     $( 'table#wp-calendar' ).addClass( 'table table-striped');
-
-    //$(document.body).show();
+    
+    //show time
+    $(document.body).show();
     
     
     

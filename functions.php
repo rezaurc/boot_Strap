@@ -2,6 +2,7 @@
 
 /**
  * 786
+ * function file based on _S
  * boot_Strap functions and definitions
  *
  * @package boot_Strap
@@ -107,16 +108,13 @@ add_action('widgets_init', 'boot_Strap_widgets_init');
  */
 function boot_Strap_scripts() {
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all');
-
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), false, 'all');
-    wp_enqueue_script('bootstrapwp', get_template_directory_uri() . '/js/bootstrap-wp.js', array('jquery'));
     wp_enqueue_script('modernizr', '//modernizr.com/downloads/modernizr-latest.js', array());
     //load theme style file at last 
     wp_enqueue_style( 'boot_Strap-style', get_stylesheet_uri() );
 
     wp_enqueue_script('boot_Strap-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true);
     wp_enqueue_script('boot_Strap-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '20120206', true);
-
     wp_enqueue_script('boot_Strap-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
    
 
@@ -162,6 +160,12 @@ if( 'primary' == $args['theme_location'] )
 		$args['fallback_cb'] = '';
                 $args['menu_id'] = 'main-menu';
 		$args['walker'] =  new wp_bootstrap_navwalker();
+                //restrict multilable for now @future
+                if(wp_is_mobile()){
+                $args['depth'] = -1;    
+                }else{
+                $args['depth'] = 2;
+                }
 	}
 	return $args;
 }

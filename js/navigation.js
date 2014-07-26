@@ -32,7 +32,3 @@
 			container.className += ' toggled';
 	};
 } )();
-jQuery(document).ready(function () {
-    //hide a div after 3 seconds
-    setTimeout( "jQuery('.alert-warning').fadeOut('slow');",15000 );
-});
