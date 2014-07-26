@@ -21,10 +21,10 @@ if (!function_exists('boot_Strap_setup')) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    define('THM_LIB', get_template_directory() . '/inc');
+    define('THM_INC', get_template_directory() . '/inc');
 
 //bootstrap walker thanks to https://github.com/twittem/wp-bootstrap-navwalker
-    require_once('wp_bootstrap_navwalker.php');
+    require_once (THM_INC . '/wp_bootstrap_navwalker.php');
     function boot_Strap_setup() {
 
         /*
@@ -107,7 +107,7 @@ function boot_Strap_scripts() {
 
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), false, 'all');
     wp_enqueue_script('bootstrapwp', get_template_directory_uri() . '/js/bootstrap-wp.js', array('jquery'));
-    wp_enqueue_script('bootstrapwp', get_template_directory_uri() . '/js/bootstrap-wp.js', array('jquery'));
+    wp_enqueue_script('modernizr', '//modernizr.com/downloads/modernizr-latest.js', array());
     //load theme style file at last 
     wp_enqueue_style( 'boot_Strap-style', get_stylesheet_uri() );
 
@@ -132,22 +132,22 @@ require get_template_directory() . '/inc/custom-header.php';
 /**
  * Custom template tags for this theme.
  */
-require (THM_LIB . '/template-tags.php');
+require (THM_INC . '/template-tags.php');
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require (THM_LIB . '/extras.php');
+require (THM_INC . '/extras.php');
 
 /**
  * Customizer additions.
  */
-require (THM_LIB . '/customizer.php');
+require (THM_INC . '/customizer.php');
 
 /**
  * Load Jetpack compatibility file.
  */
-require (THM_LIB . '/jetpack.php');
+require (THM_INC . '/jetpack.php');
 
 
 function boot_Strap_custom_walker( $args ) {

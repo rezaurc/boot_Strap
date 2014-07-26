@@ -88,8 +88,18 @@ This theme, like WordPress, is licensed under the GPL.
 }
 
 
-/* Menu */
-
+/* Menu 
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:100%;left:0;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+*/
+.dropdown:hover .dropdown-menu {
+    display: block;
+ }
+/*
 .main-navigation {
 	clear: both;
 	display: block;
@@ -140,7 +150,7 @@ This theme, like WordPress, is licensed under the GPL.
 .main-navigation .current-menu-item a {
 }
 
-/* Small menu */
+/* Small menu 
 .menu-toggle {
 	cursor: pointer;
 	display: none;
@@ -242,24 +252,6 @@ iframe,
 object {
 	max-width: 100%;
 }
-
-
-/* Navigation */
-
-.site-main [class*="navigation"] {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-[class*="navigation"] .nav-previous {
-	float: left;
-	width: 50%;
-}
-[class*="navigation"] .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
 
 /* Comments */
 
@@ -594,8 +586,3 @@ object {
     display: block;
 }
 
-/*==================Project Archive Page=============================================*/
-body.post-type-archive-projects{
-    padding-bottom: 70px;
-}
-/*==================Project Archive Page Ends========================================*/
