@@ -1,21 +1,5 @@
 <?php
 /**
- * Sample implementation of the Custom Header feature
- * http://codex.wordpress.org/Custom_Headers
- *
- * You can add an optional custom header image to header.php like so ...
-
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
-
- *
- * @package boot_Strap
- */
-
-/**
  * Setup the WordPress core custom header feature.
  *
  * @uses boot_Strap_header_style()
@@ -126,3 +110,33 @@ function boot_Strap_admin_header_image() {
 <?php
 }
 endif; // boot_Strap_admin_header_image
+
+/**
+ * Add above header area 
+ * Register action hook : boot_Strap_topbar
+ * @uses element Description
+ */
+function boot_Strap_header_topbar(){
+    do_action('boot_Strap_header_topbar');
+}
+if (function_exists('boot_Strap_child_header_topbar')){
+    /**
+     * @ignore
+     */
+    function show_boot_Strap_header_topbar(){
+        //let's do whatever we want @ child theme
+        boot_Strap_child_header_topbar();
+    }
+}else{
+     function show_boot_Strap_header_topbar(){
+         /*
+          * initiate header topbar widget
+          * display widgets 
+          */
+        
+         if ( ! dynamic_sidebar( 'header-top-bar' ) ) {             
+		get_search_form();             
+         }
+     }
+}
+add_action('boot_Strap_header_topbar', 'show_boot_Strap_header_topbar');

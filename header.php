@@ -22,11 +22,15 @@
 <div id="page" class="hfeed site container-fluid">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-            <div class="alert alert-warning alert-dismissable text-center">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Warning!</strong> Sorry it's not looking good (Under Development). 
-              </div>
+            <div id="header-top-bar">
+                <?php show_boot_Strap_header_topbar(); ?>
+             </div>
 		<div class="site-branding">
+                    <?php if ( get_header_image() ) { ?>
+                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                            <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo( 'name' ); ?>">
+                        </a>
+                    <?php } ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
