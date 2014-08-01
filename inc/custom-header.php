@@ -136,7 +136,7 @@ if (function_exists('boot_Strap_child_header_topbar')){
         
          if ( ! dynamic_sidebar( 'header-top-bar' ) ) { 
               if (current_user_can('manage_options')){
-		$bS_out .= '<a href="' . admin_url('widgets.php') . '">Set Widget</a></li>';       
+		$bS_out = '<a href="' . admin_url('widgets.php') . '">Set Widget</a></li>';       
               }else{
                  $bS_out = "<style>#header-top-bar{display:none;}</style>"; 
               }
