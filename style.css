@@ -434,8 +434,8 @@ object {
 .hentry.attachment:not(.image-attachment) .entry-meta {
 	max-width: 104px;
 }
-.entry-header>.entry-meta{
-    max-width: 100%;
+.hentry .entry-header>.entry-meta{
+    max-width: 100% !important;
 }
 .attachment footer.entry-meta {
 	display: none;
