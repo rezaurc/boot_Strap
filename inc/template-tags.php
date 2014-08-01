@@ -19,7 +19,7 @@ function boot_Strap_paging_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
+	<nav class="navigation paging-navigation text-center" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'boot_Strap' ); ?></h1>
 		<div class="nav-links">
 
@@ -52,7 +52,7 @@ function boot_Strap_post_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
+	<nav class="navigation post-navigation text-center" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'boot_Strap' ); ?></h1>
 		<div class="nav-links">
 			<?php

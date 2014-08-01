@@ -134,8 +134,13 @@ if (function_exists('boot_Strap_child_header_topbar')){
           * display widgets 
           */
         
-         if ( ! dynamic_sidebar( 'header-top-bar' ) ) {             
-		get_search_form();             
+         if ( ! dynamic_sidebar( 'header-top-bar' ) ) { 
+              if (current_user_can('manage_options')){
+		$bS_out .= '<a href="' . admin_url('widgets.php') . '">Set Widget</a></li>';       
+              }else{
+                 $bS_out = "<style>#header-top-bar{display:none;}</style>"; 
+              }
+              echo $bS_out;
          }
      }
 }

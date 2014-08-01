@@ -17,30 +17,11 @@
  */
 
 //GLOBALS
-
-
 jQuery(document).ready(function () {    
     //Remove info/warning bar after 15 sec
     setTimeout( "jQuery('.alert-warning').fadeOut('slow');",15000 );
 
-    var $ = jQuery;
-    //menu
-    /*    $( ".menu-item-has-children" ).mouseover(function(event) {
-        // stop bootstrap.js to hide the parents
-        event.stopPropagation();
-        // hide the open children
-        $( this ).find(".dropdown").removeClass('open');
-        // add 'open' class to all parents with class 'dropdown-submenu'
-        $( this ).parents(".dropdown").addClass('open');
-        $( this ).addClass('open');
-        // this is also open (or was)
-        //$( this ).toggleClass('open');
-    }); 
-    $( ".menu-item-has-children" ).mouseout(function(event) {
-         event.stopPropagation();
-         $( this ).parents(".dropdown").removeClass('open');
-    });*/
-    
+    var $ = jQuery;  
     $( 'input.search-field' ).addClass( 'form-control' );
     $( '.comment-reply-link' ).addClass( 'btn btn-primary' );
     $( '#commentsubmit' ).addClass( 'btn btn-primary' );
@@ -53,8 +34,5 @@ jQuery(document).ready(function () {
     $( 'table#wp-calendar' ).addClass( 'table table-striped');
     
     //show time
-    $(document.body).show();
-    
-    
-    
+    $(document.body).show(); 
 });
