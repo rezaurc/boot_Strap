@@ -27,10 +27,11 @@ add_filter( 'wp_page_menu_args', 'boot_Strap_page_menu_args' );
  */
 function boot_Strap_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
+    global $post;
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-
+ $classes[] = $post->post_name;
 	return $classes;
 }
 add_filter( 'body_class', 'boot_Strap_body_classes' );
