@@ -126,10 +126,10 @@ if (!function_exists('boot_Strap_child_header_topbar')){
  * Enqueue scripts and styles.
  */
 function boot_Strap_scripts() {
-    wp_enqueue_style('fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+    wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css');
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all');
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), false, 'all');
-    wp_enqueue_script('modernizr', '//modernizr.com/downloads/modernizr-latest.js', array());    
+   // wp_enqueue_script('modernizr', '//modernizr.com/downloads/modernizr-latest.js', array());    
     //load theme style file after bootstrap style 
     wp_enqueue_style( 'boot_Strap-style', get_stylesheet_uri() );
 

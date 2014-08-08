@@ -63,7 +63,7 @@ function boot_Strap_post_classes( $classes ) {
     global $post;
 	if ( is_sticky() ) {
 		$classes[] = 'jumbotron';
-        }elseif (is_single()){
+        }elseif (is_single() || is_page()){
             
         }else{
             $classes[] = 'panel panel-default';
@@ -112,6 +112,16 @@ function boot_Strap_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'boot_Strap_wp_title', 10, 2 );
+/**
+ * Filter Content
+ * @param string $content Default Content as text
+ * @return string filtered content
+ * @package boot_Strap
+ */
+//function boot_Strap_the_content($content){
+    
+//}
+//add_filter();
 
 /**
  * Sets the authordata global when viewing an author archive.

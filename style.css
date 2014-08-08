@@ -127,7 +127,18 @@ This theme, like WordPress, is licensed under the GPL.
 	margin: 0 0 1.5em;
 }
 
-
+blockquote, .blockquote, blockquote p{
+    font-style: italic;
+    font-weight: 200;
+}
+blockquote cite, .blockquote .cite{
+    display: block;
+    font-size: 80%;
+    font-style: normal;
+    line-height: 1.42857143;
+    margin-top: 6px;
+    font-weight: normal;
+}
 /* Asides */
 
 .blog .format-aside .entry-title,
