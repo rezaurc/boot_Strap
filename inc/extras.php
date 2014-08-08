@@ -48,6 +48,40 @@ function activate_boot_Strap_body_classes(){
 add_action('init', 'activate_boot_Strap_body_classes');
 
 /**
+ * Adds custom classes to the array of post classes.
+ *
+ * @param array $classes Classes for the post element.
+ * @return array
+ */
+if ( function_exists( 'boot_Strap_childtheme_post_class' ) )  {
+    function boot_Strap_post_classes(){
+        boot_Strap_childtheme_post_class();
+    }
+}else{
+function boot_Strap_post_classes( $classes ) {
+	// Adds a class of group-blog to blogs with more than 1 published author.
+    global $post;
+	if ( is_sticky() ) {
+		$classes[] = 'jumbotron';
+        }elseif (is_single()){
+            
+        }else{
+            $classes[] = 'panel panel-default';
+        }
+
+		$classes[] = 'clearfix';
+
+    
+	return array_unique(apply_filters( 'boot_Strap_post_classes', $classes ));
+        
+        }     
+}
+function activate_boot_Strap_post_classes(){
+    add_filter( 'post_class', 'boot_Strap_post_classes', 20 );
+}
+add_action('init', 'activate_boot_Strap_post_classes');
+
+/**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  *
  * @param string $title Default title text for current view.

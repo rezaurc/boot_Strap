@@ -5,8 +5,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+	<header class="entry-header <?php if(!is_sticky()) echo 'panel-heading'; ?>">
+		<h1 class="entry-title <?php if(!is_sticky()) echo 'panel-title'; ?>"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -20,7 +20,7 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
-	<div class="entry-content">
+	<div class="entry-content <?php if(!is_sticky()) echo 'panel-body'; ?>">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'boot_Strap' ) ); ?>
 		<?php
 			wp_link_pages( array(
@@ -31,7 +31,7 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<footer class="entry-meta">
+	<footer class="entry-meta <?php if(!is_sticky()) echo 'panel-footer'; ?>">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php
 				/* translators: used between list items, there is a space after the comma */
