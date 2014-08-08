@@ -25,16 +25,27 @@ add_filter( 'wp_page_menu_args', 'boot_Strap_page_menu_args' );
  * @param array $classes Classes for the body element.
  * @return array
  */
+if ( function_exists( 'boot_Strap_childtheme_body_class' ) )  {
+    function boot_Strap_body_classes(){
+        boot_Strap_childtheme_body_class();
+    }
+}else{
 function boot_Strap_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
     global $post;
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
- $classes[] = $post->post_name;
-	return $classes;
+    $classes[] = $post->post_name;
+    
+	return array_unique(apply_filters( 'boot_Strap_body_classes', $classes ));
+        
+        }     
 }
-add_filter( 'body_class', 'boot_Strap_body_classes' );
+function activate_boot_Strap_body_classes(){
+    add_filter( 'body_class', 'boot_Strap_body_classes', 20 );
+}
+add_action('init', 'activate_boot_Strap_body_classes');
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
