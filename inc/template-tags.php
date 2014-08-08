@@ -13,25 +13,48 @@ if ( ! function_exists( 'boot_Strap_paging_nav' ) ) :
  *
  * @return void
  */
-function boot_Strap_paging_nav() {
+function boot_Strap_paging_nav($pages = '', $range = 2) {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
 	}
+        global $paged, $wp_query;
+        $showitems = ($range * 2)+1;  
+            if(empty($paged)){$paged = 1;}
+            if($pages == '')
+            {
+                $pages = $wp_query->max_num_pages;
+                    if(!$pages)
+                        {
+                            $pages = 1;
+                        }
+            } 
 	?>
 	<nav class="navigation paging-navigation text-center" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'boot_Strap' ); ?></h1>
-		<div class="nav-links">
+		<ul class="nav-links pagination">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'boot_Strap' ) ); ?></div>
+			<li class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav fa fa-angle-left"></span> Older posts', 'boot_Strap' ) ); ?></li>
 			<?php endif; ?>
-
+                        <?php if(1 != $pages): 
+                            for ($i=1; $i <= $pages; $i++)
+                                {
+                                    if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+                                    {
+                                       $html = ($paged == $i)? "<li class='active'><a href='#'>".$i."</a></li>":"<li><a href='".get_pagenum_link($i)."' >".$i."</a></li>";
+                                       echo $html;
+                                    }
+                                }
+                                
+                            ?>
+                        
+                        <?php endif; ?>    
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'boot_Strap' ) ); ?></div>
+			<li class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav fa fa-angle-right"></span>', 'boot_Strap' ) ); ?></li>
 			<?php endif; ?>
 
-		</div><!-- .nav-links -->
+		</ul<!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
 }
@@ -54,12 +77,12 @@ function boot_Strap_post_nav() {
 	?>
 	<nav class="navigation post-navigation text-center" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'boot_Strap' ); ?></h1>
-		<div class="nav-links">
+		<ul class="nav-links pager">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'boot_Strap' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'boot_Strap' ) );
+				previous_post_link( '<li class="nav-previous previous">%link</li>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'boot_Strap' ) );
+				next_post_link(     '<li class="nav-next next">%link</li>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'boot_Strap' ) );
 			?>
-		</div><!-- .nav-links -->
+		</ul><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
 }

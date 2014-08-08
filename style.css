@@ -13,10 +13,27 @@ Tags: responsive-layout, custom-header
 
 This theme, like WordPress, is licensed under the GPL.
 
-/* Alignment */
-*{
-    border-radius: 0 !important;
+/* Layout*/
+/*
+* to make sidebar-content (left sidebar) uncomment content-area
+* to make this change for any specific page use the page slug as css class and add below code
+*/
+/* for all page*/
+/*
+.content-area {
+    float: right;
 }
+*/
+/*for a specific page. Exm:- sample-page is the slug of Sample page Come with WordPress Default install*/
+.sample-page .content-area{
+    float: right;
+}
+/* Disable all rounded corner, unless override later this */
+*{
+    /* border-radius: 0 !important;*/
+}
+
+/* Alignment */
 .alignleft {
 	display: inline;
 	float: left;
@@ -87,9 +104,6 @@ This theme, like WordPress, is licensed under the GPL.
 	clear: both;
 }
 
-/*.dropdown:hover .dropdown-menu {
-    display: block;
- }*/
 .sticky {
 }
 .hentry {
@@ -262,7 +276,6 @@ ul.sm li *,ul.sm li *:before,ul.sm li *:after{-moz-box-sizing:content-box;-webki
 	padding: 0;
 }
 .wp-caption {
-	border: 1px solid #ccc;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 }
@@ -333,14 +346,6 @@ object {
 	font-size: 14px;
 }
 
-.entry-meta a {
-	color: #bc360a;
-}
-
-.entry-meta a:hover {
-	color: #bc360a;
-}
-
 .entry-meta > span {
 	margin-right: 20px;
 }
@@ -398,7 +403,6 @@ object {
 /* Attachments */
 
 .attachment .hentry {
-	background-color: #e8e5ce;
 	margin: 0;
 	padding: 0;
 }
@@ -453,14 +457,7 @@ object {
 	content: none;
 }
 
-.attachment .entry-meta a,
-.attachment .entry-meta .edit-link:before,
-.attachment .full-size-link:before {
-	color: #ca3c08;
-}
-
 .attachment .entry-content {
-	background-color: #fff;
 	max-width: 100%;
 	padding: 40px 0;
 }
@@ -560,11 +557,6 @@ object {
 	float: left;
 	margin: 0 30px 30px 0;
 }
-
-.single-format-status .author-description {
-	color: #f7f5e7;
-}
-
 .author-description .author-title {
 	clear: none;
 	font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
@@ -572,7 +564,6 @@ object {
 }
 
 .author-link {
-	color: #ca3c08;
 	margin-left: 2px;
 }
 
@@ -580,10 +571,6 @@ object {
 	display: none;
 }
 /* 404 */
-
-.error404 .page-header {
-	background-color: #fff;
-}
 
 .error404 .page-title {
 	line-height: 0.6;
@@ -595,7 +582,6 @@ object {
 }
 
 .error404 .page-title:before {
-	color: #e8e5ce;
 	content: "\f423";
 	font-size: 964px;
 	line-height: 0.6;
@@ -603,10 +589,6 @@ object {
 	position: absolute;
 	left: 7px;
 	top: 28px;
-}
-
-.error404 .page-wrapper {
-	background-color: #e8e5ce;
 }
 
 .error404 .page-header,
