@@ -22,10 +22,33 @@ if (!function_exists('boot_Strap_setup')) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    define('THM_INC', get_template_directory() . '/inc');
 
-//bootstrap walker thanks to https://github.com/twittem/wp-bootstrap-navwalker
-    require_once (THM_INC . '/wp_bootstrap_navwalker.php');
+    $bS_incl_path = get_template_directory() . '/inc';
+
+    /**
+     * Define theme include path
+     * 
+     * Normalize the include path to be safe on windows hosts
+     * @return string Normalized path
+     * require min WordPress version 3.9
+     * @since boot_Strap 1.0.1
+     * 
+     */
+
+     if(function_exists('wp_normalize_path')){
+         
+        $bS_incl_path = wp_normalize_path($bS_incl_path);
+     }
+    
+    define('THM_INC', $bS_incl_path);
+
+
+      /**
+       * bootstrap walker thanks to https://github.com/twittem/wp-bootstrap-navwalker
+       */
+
+    require_once (THM_INC. '/wp_bootstrap_navwalker.php');     
+
     function boot_Strap_setup() {
 
         /*
@@ -207,4 +230,10 @@ function boot_Strap_theme_options_function(){
 	echo '<div class="wrap">';
 	echo '<p>Here is where the form would go if I actually had options.</p>';
 	echo '</div>';   
+}
+if ( !(''== category_description()) ) : $content .= apply_filters('archive_meta', category_description()); endif;
+if(!function_exists('category_description')){
+    function category_description(){
+        
+    }
 }
