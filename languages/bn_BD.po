@@ -1,0 +1,313 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: boot_Strap\n"
+"POT-Creation-Date: 2014-08-21 16:44+0600\n"
+"PO-Revision-Date: 2014-08-21 17:17+0600\n"
+"Last-Translator: Rezaur Chowdhury <rezaurc@yahoo.com>\n"
+"Language-Team: Rezaur Chowdhury <rezaurc@yahoo.com>\n"
+"Language: bn_BD\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "দুঃখিত! এই পৃষ্ঠা পাওয়া যায নাই।"
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"দুঃখিত! মনে হচ্ছে কিছুই পাওয়া যায়নি। নিচের লিঙ্ক বা অনুসন্ধান এর মধ্যে একটি চেষ্টা "
+"করুন"
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "সর্বাধিক ব্যবহৃত বিভাগসমূহ"
+
+#. translators: %1$s: smiley
+#: 404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "মাসিক আর্কাইভ এ দেখুন %1$s"
+
+#: archive.php:27
+#, php-format
+msgid "Author: %s"
+msgstr "লেখক: %s"
+
+#: archive.php:30
+#, php-format
+msgid "Day: %s"
+msgstr "দিন: %s"
+
+#: archive.php:33
+#, php-format
+msgid "Month: %s"
+msgstr "মাস: %s"
+
+#: archive.php:33
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: archive.php:36
+#, php-format
+msgid "Year: %s"
+msgstr "বছর: %s"
+
+#: archive.php:36
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:39
+msgid "Asides"
+msgstr "পার্শ্বদেশসমূহ"
+
+#: archive.php:42
+msgid "Galleries"
+msgstr "গ্যালারীসমূহ"
+
+#: archive.php:45
+msgid "Images"
+msgstr "চিত্রসমূহ"
+
+#: archive.php:48
+msgid "Videos"
+msgstr "ভিডিওসমূহ"
+
+#: archive.php:51
+msgid "Quotes"
+msgstr "উক্তিসমূহ"
+
+#: archive.php:54
+msgid "Links"
+msgstr "লিংকসমূহ"
+
+#: archive.php:57
+msgid "Statuses"
+msgstr "অবস্থাসমূহ"
+
+#: archive.php:60
+msgid "Audios"
+msgstr "অডিওসমূহ"
+
+#: archive.php:63
+msgid "Chats"
+msgstr "চ্যাটগুলি"
+
+#: archive.php:65
+msgid "Projects"
+msgstr "প্রকল্পসমূহ"
+
+#: archive.php:68 sidebar.php:17
+msgid "Archives"
+msgstr "আর্কাইভসমূহ"
+
+#: comments.php:30
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "শিরোনামের উপর চিন্তা &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s শিরোনামগুলির উপর চিন্তা &ldquo;%2$s&rdquo;"
+
+#: comments.php:37 comments.php:54
+msgid "Comment navigation"
+msgstr "মন্তব্য ন্যাভিগেশন"
+
+#: comments.php:38 comments.php:55
+msgid "&larr; Older Comments"
+msgstr "পুরাতন মন্তব্যসমূহ"
+
+#: comments.php:39 comments.php:56
+msgid "Newer Comments &rarr;"
+msgstr "মন্তব্যসমূহ"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "মন্তব্য বন্ধ আছে।"
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "কিছুই পাওয়া যায়নি"
+
+#: content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "আপনার প্রথম পোস্ট প্রকাশ করার জন্য প্রস্তুত? <a href=\"%1$s\">শুরু করুন</a>."
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"দুঃখিত, আপনার অনুসন্ধানের বিষয়বস্তুর সাথে এখানে কিছুই মিলেছে না। অন্য বিষয়বস্তু "
+"ব্যবহার করে চেষ্টা করুন"
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "মনে হচ্ছে আপনি যা খুঁজছেন তা খুঁজে পাচ্ছি না। অনুসন্ধানের সাহায্য নিতে পারেন"
+
+#: content-page.php:21 content-single.php:20 content.php:27
+msgid "Pages:"
+msgstr "পাতাসমূহ:"
+
+#: content-page.php:26 content-single.php:60 content.php:61
+msgid "Edit"
+msgstr "সম্পাদনা"
+
+#. translators: used between list items, there is a space after the comma
+#: content-single.php:29 content-single.php:32 content.php:38 content.php:48
+msgid ", "
+msgstr ", "
+
+#: content-single.php:37
+#, php-format
+msgid ""
+"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"এই এন্ট্রি ট্যাগ করা ছিল %2$s । <a href=\"%3$s\" rel=\"bookmark\">এটা</a> "
+"বুকমার্ক করুন।"
+
+#: content-single.php:39
+#, php-format
+msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "<a href=\"%3$s\" rel=\"bookmark\">এটা</a> বুকমার্ক করুন।"
+
+#: content-single.php:45
+#, php-format
+msgid ""
+"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
+"rel=\"bookmark\">permalink</a>."
+msgstr ""
+"এই লেখাটি পোস্ট করা হয়েছে %1$s এ এবং ট্যাগ হয়েছে %2$s. <a href=\"%3$s\" rel="
+"\"bookmark\">এটা</a> বুকমার্ক করুন।"
+
+#: content-single.php:47
+#, php-format
+msgid ""
+"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"এই লেখাটি পোস্ট করা হয়েছে  %1$s এ। <a href=\"%3$s\" rel=\"bookmark\">এটা</a> "
+"বুকমার্ক করুন।"
+
+#: content.php:24
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "বিস্তারিত পড়ুন <span class=\"meta-nav\">&rarr;</span>"
+
+#: content.php:42
+#, php-format
+msgid "Posted in %1$s"
+msgstr "পোস্ট করা হয়েছে %1$s  এ।"
+
+#: content.php:52
+#, php-format
+msgid "Tagged %1$s"
+msgstr "ট্যাগ হয়েছে %1$s ।"
+
+#: content.php:58
+msgid "Leave a comment"
+msgstr "মন্তব্য দিন"
+
+#: content.php:58
+msgid "1 Comment"
+msgstr "১টি মন্তব্য"
+
+#: content.php:58
+msgid "% Comments"
+msgstr "% টি মন্তব্য"
+
+#: footer.php:16
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "সদম্ভে %s দ্বারা চালিত"
+
+#: footer.php:18
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "থিম: %1$s কর্তৃক %2$s."
+
+#: functions.php:73
+msgid "Primary Menu"
+msgstr "প্রাইমারি মেনু"
+
+#: functions.php:118
+msgid "Sidebar"
+msgstr "পার্শ্বদন্ডে"
+
+#: functions.php:136
+msgid "Header Topbar"
+msgstr "শিরোনাম শীর্ষ বার"
+
+#: functions.php:228
+msgid "You do not have sufficient permissions to access this page."
+msgstr "দুঃখিত! এই পৃষ্ঠায় দেখতে আপনার যথেষ্ট অনুমতি নেই."
+
+#: header.php:47
+msgid "Skip to content"
+msgstr "সরাসরি নিবন্ধে যান"
+
+#: inc/extras.php:205
+#, php-format
+msgid "Page %s"
+msgstr "পাতা %s"
+
+#: inc/template-tags.php:34
+msgid "Posts navigation"
+msgstr "পোস্ট ন্যাভিগেশন"
+
+#: inc/template-tags.php:38
+msgid "<span class=\"meta-nav fa fa-angle-left\"></span> Older posts"
+msgstr "<span class=\"meta-nav fa fa-angle-left\"></span> পুরাতন প্রবন্ধসমূহ"
+
+#: inc/template-tags.php:54
+msgid "Newer posts <span class=\"meta-nav fa fa-angle-right\"></span>"
+msgstr "নতুন প্রবন্ধসমূহ <span class=\"meta-nav fa fa-angle-right\"></span>"
+
+#: inc/template-tags.php:79
+msgid "Post navigation"
+msgstr "পোস্ট ন্যাভিগেশন"
+
+#: inc/template-tags.php:82
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr "<span class=\"meta-nav\">&larr;</span> %title"
+
+#: inc/template-tags.php:83
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr "%title <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:108
+#, php-format
+msgid ""
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+"<span class=\"posted-on\">এই লেখাটি পোস্ট করা হয়েছে %1$s এ,</span><span class="
+"\"byline\"> %2$s কর্তৃক</span>"
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "আপনার অনুসন্ধান: %s -এর ফলাফল"
+
+#: sidebar.php:24
+msgid "Meta"
+msgstr "মেটা"
