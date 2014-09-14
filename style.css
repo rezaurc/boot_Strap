@@ -6,10 +6,10 @@ Author URI: http://www.rezaur.com
 Description: Theme is based on _s by Auttomatic. I just got it married with twitter bootstrap 3 and added some extra.
 Version: 1.0.2
 License: GNU General Public License v2.0
-License URL: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: boot_Strap
 Domain Path: /languages/
-Tags: responsive-layout, custom-header, one-column, two-columns, right-sidebar, flexible-width, rtl-language-support, sticky-post, editor-style
+Tags: responsive-layout, custom-header, one-column, two-columns, right-sidebar, left-sidebar, rtl-language-support, sticky-post, editor-style, black, white, featured-images
 
 This theme, like WordPress, is licensed under the GPL.
 
@@ -361,55 +361,6 @@ object {
 }
 /* Entry Meta */
 
-.entry-meta {
-	clear: both;
-	font-size: 14px;
-}
-
-.entry-meta > span {
-	margin-right: 20px;
-}
-
-.entry-meta > span:last-child {
-	margin-right: 0;
-}
-.featured-post:before {
-	content: "\f308";
-	margin-right: 2px;
-}
-
-.entry-meta .date a:before {
-	content: "\f303";
-}
-
-.comments-link a:before {
-	content: "\f300";
-	margin-right: 2px;
-	position: relative;
-	top: -1px;
-}
-
-.entry-meta .author a:before {
-	content: "\f304";
-	position: relative;
-	top: -1px;
-}
-
-.categories-links a:first-child:before {
-	content: "\f301";
-}
-
-.tags-links a:first-child:before {
-	content: "\f302";
-	position: relative;
-	top: -1px;
-}
-
-.edit-link a:before {
-	content: "\f411";
-	position: relative;
-	top: -1px;
-}
 
 .single-author .entry-meta .author,
 .sticky.format-standard .entry-meta .date,

@@ -218,6 +218,7 @@ if( 'primary' == $args['theme_location'] )
 add_filter( 'wp_nav_menu_args', 'boot_Strap_custom_walker' );
 
 //admin theme setting page
+/*
 add_action('admin_menu', 'boot_Strap_theme_admin_menu');
 
 function boot_Strap_theme_admin_menu() {
@@ -231,6 +232,8 @@ function boot_Strap_theme_options_function(){
 	echo '<p>Here is where the form would go if I actually had options.</p>';
 	echo '</div>';   
 }
+ * 
+ */
 if ( !(''== category_description()) ) : $content .= apply_filters('archive_meta', category_description()); endif;
 if(!function_exists('category_description')){
     function category_description(){

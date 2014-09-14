@@ -21,7 +21,11 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content <?php if(!is_sticky()) echo 'panel-body'; ?>">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'boot_Strap' ) ); ?>
+            <?php 
+            if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                the_post_thumbnail();
+            } 
+        the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'boot_Strap' ) ); ?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'boot_Strap' ),
