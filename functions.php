@@ -40,14 +40,14 @@ if (!function_exists('boot_Strap_setup')) :
         $bS_incl_path = wp_normalize_path($bS_incl_path);
      }
     
-    define('THM_INC', $bS_incl_path);
+    define('BOOT_STRAP_INC', $bS_incl_path);
 
 
       /**
        * bootstrap walker thanks to https://github.com/twittem/wp-bootstrap-navwalker
        */
 
-    require_once (THM_INC. '/wp_bootstrap_navwalker.php');     
+    require_once (BOOT_STRAP_INC. '/wp_bootstrap_navwalker.php');     
 
     function boot_Strap_setup() {
 
@@ -65,8 +65,6 @@ if (!function_exists('boot_Strap_setup')) :
         add_theme_support('automatic-feed-links');
 
         add_theme_support('post-thumbnails');
-        add_theme_support('hybrid-core-theme-settings');
-
 
         // This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
@@ -178,22 +176,22 @@ require get_template_directory() . '/inc/custom-header.php';
 /**
  * Custom template tags for this theme.
  */
-require (THM_INC . '/template-tags.php');
+require (BOOT_STRAP_INC . '/template-tags.php');
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require (THM_INC . '/extras.php');
+require (BOOT_STRAP_INC . '/extras.php');
 
 /**
  * Customizer additions.
  */
-require (THM_INC . '/customizer.php');
+require (BOOT_STRAP_INC . '/customizer.php');
 
 /**
  * Load Jetpack compatibility file.
  */
-require (THM_INC . '/jetpack.php');
+require (BOOT_STRAP_INC . '/jetpack.php');
 
 
 function boot_Strap_custom_walker( $args ) {
@@ -216,27 +214,3 @@ if( 'primary' == $args['theme_location'] )
 	return $args;
 }
 add_filter( 'wp_nav_menu_args', 'boot_Strap_custom_walker' );
-
-//admin theme setting page
-/*
-add_action('admin_menu', 'boot_Strap_theme_admin_menu');
-
-function boot_Strap_theme_admin_menu() {
-	add_theme_page('boot_Strap Theme', 'boot_Strap', 'edit_theme_options', 'boot_Strap-theme-options', 'boot_Strap_theme_options_function');
-}
-function boot_Strap_theme_options_function(){
-    if ( !current_user_can( 'manage_options' ) )  {
-		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
-	}
-	echo '<div class="wrap">';
-	echo '<p>Here is where the form would go if I actually had options.</p>';
-	echo '</div>';   
-}
- * 
- */
-if ( !(''== category_description()) ) : $content .= apply_filters('archive_meta', category_description()); endif;
-if(!function_exists('category_description')){
-    function category_description(){
-        
-    }
-}

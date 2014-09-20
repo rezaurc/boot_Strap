@@ -1,6 +1,6 @@
 /*
 Theme Name: boot_Strap
-Theme URI: http://bootstrap.rezaur.net
+Theme URI: http://rezaur.com/boot-strap
 Author: Rezaur Chowdhury
 Author URI: http://www.rezaur.com
 Description: Theme is based on _s by Auttomatic. I just got it married with twitter bootstrap 3 and added some extra.
@@ -12,12 +12,6 @@ Domain Path: /languages/
 Tags: responsive-layout, custom-header, one-column, two-columns, right-sidebar, left-sidebar, rtl-language-support, sticky-post, editor-style, black, white, featured-images
 
 This theme, like WordPress, is licensed under the GPL.
-
-_s (or Underscores) http://underscores.me/, (C) 2012-2014 Automattic, Inc.
-Bootstrap v3.2.0 (http://getbootstrap.com), Copyright 2011-2014 Twitter, Inc.
-Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
-SmartMenus jQuery Plugin - v0.9.6, Copyright 2014 Vasil Dinkov, Vadikom Web Ltd.
-boot_strap
 
 ===============================================================================================================
 ===============================================================================================================
@@ -248,6 +242,27 @@ blockquote cite, .blockquote .cite{
 	border-bottom:7px dashed transparent;
 	border-left:7px dashed transparent;
 }
+#secondary .nav>li{
+    display:block;
+    padding: 10px 15px 10px 0;
+    position: relative;
+    border-bottom: 1px dotted;
+}
+#secondary .nav>li ul li{
+    margin-left: 10px;
+}
+#secondary .nav>li ul li:last-child{
+   border-bottom: 0px dotted;  
+}
+
+#secondary .nav>li>a{
+    display:inline;
+    padding: 0;    
+}
+#secondary .nav>li>a:hover{
+    background: transparent;
+}
+
 /* add more indentation for 2+ level sub in collapsible mode - Bootstrap normally supports just 1 level sub menus */
 .navbar-nav .collapsible ul .dropdown-menu > li > a,
 .navbar-nav .collapsible ul .dropdown-menu .dropdown-header {
