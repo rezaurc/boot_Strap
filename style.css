@@ -125,6 +125,7 @@ This theme, like WordPress, is licensed under the GPL.
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -142,6 +143,23 @@ blockquote cite, .blockquote .cite{
     margin-top: 6px;
     font-weight: normal;
 }
+img{
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+.panel-heading>.entry-title>a{
+   font-size: 20px;
+}
+/* Extra (imput field out side form tag) */
+input[type="text"]{
+    
+}
+textArea{
+    width: 98%;
+}
+
 /* Asides */
 
 .blog .format-aside .entry-title,
@@ -301,7 +319,6 @@ ul.sm li *,ul.sm li *:before,ul.sm li *:after{-moz-box-sizing:content-box;-webki
 /* End Smart menu css */
 
 /* Media */
-
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -342,7 +359,9 @@ ul.sm li *,ul.sm li *:before,ul.sm li *:after{-moz-box-sizing:content-box;-webki
 }
 .site-main .gallery-columns-4 .gallery-item img {
 }
-
+.gallery img, .comment-author img{/*fix thumbnail image align on left*/
+    display: inherit;
+}
 /* Make sure embeds and iframes fit their containers */
 embed,
 iframe,
@@ -357,8 +376,16 @@ object {
 }
 .bypostauthor {
 }
-
-
+.comment-form{
+    max-width: 40em;
+}
+.comment-list li{
+    margin-bottom: 10px;
+    list-style: none; 
+}
+.comment-list div.reply{
+    margin-bottom: 5px;
+}
 /* Widgets*/
 
 .widget {
@@ -384,6 +411,9 @@ object {
 .sticky.format-image .entry-meta .date,
 .sticky.format-gallery .entry-meta .date {
 	display: none;
+}
+.single article footer.entry-meta{
+    margin: 0.5em 0 0;
 }
 
 /* Attachments */
@@ -568,7 +598,7 @@ object {
 }
 
 .error404 .page-title:before {
-	content: "\f423";
+	content: "!";
 	font-size: 964px;
 	line-height: 0.6;
 	overflow: hidden;

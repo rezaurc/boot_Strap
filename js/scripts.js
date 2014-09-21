@@ -27,15 +27,23 @@
         //Do the Golden
    }
       //  console.log($num);
-    var bdyimg = document.getElementsByTagName('img');
-    var imgnum = bdyimg.length;
-        if(imgnum >= 1){
-            for(var i = 0; i < imgnum; i++){
-                bdyimg[i].classList.toggle('img-responsive');
+    var bdyInput = document.getElementsByTagName('input');
+    var fldNum = bdyInput.length;
+        if(fldNum >= 1){
+            for(var i = 0; i < fldNum; i++){
+                var fldTyp = bdyInput[i].getAttributeNode('type');
+                //console.log(fldTyp.value);
+                if(fldTyp.value === 'password' || fldTyp.value === 'text' || fldTyp.value === 'email' || fldTyp.value === 'url'){
+                bdyInput[i].classList.toggle('form-control');
+                }else if(fldTyp.value === 'submit'){
+                 //bdyInput[i].classList.toggle('btn btn-default');   
+                 bdyInput[i].setAttribute('class', 'btn btn-default');
+                }
             }
         }else{
            //Do the Golden
             }
+
 
 //GLOBALS
 jQuery(document).ready(function () {    
