@@ -131,8 +131,9 @@ function boot_Strap_body_classes( $classes ) {
         if(wp_is_mobile()){
                 $classes[]  = 'mobile';
         }
-    $classes[] = $post->post_name;
-    
+        if(isset($post)){
+            $classes[] = $post->post_name;
+        }    
 	return array_unique(apply_filters( 'boot_Strap_body_classes', $classes ));
         
         }     
