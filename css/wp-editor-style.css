@@ -115,7 +115,7 @@ blockquote {
 blockquote:before {
   display: block;
   float: left;
-  content: "\"";
+  content: "\";
   font-size: 40px;
   font-size: 2.5rem;
   margin: 0 15px 15px 0;

@@ -70,21 +70,21 @@ if ( post_password_required() ) {
         $aria_req = ( $req ? " aria-required='true'" : '' );
             $fields = array(
                        'author' =>
-                       '<p class="comment-form-author"><label for="author">' . __('Name', 'domainreference') . '</label> ' .
+                       '<p class="comment-form-author"><label for="author">' . __('Name', 'boot_Strap') . '</label> ' .
                        ( $req ? '<span class="required">*</span>' : '' ) .
                        '<input id="author" class="" name="author" type="text" value="' . esc_attr($commenter['comment_author']) .
                        '" size="30"' . $aria_req . ' /></p>',
                        'email' =>
-                       '<p class="comment-form-email"><label for="email">' . __('Email', 'domainreference') . '</label> ' .
+                       '<p class="comment-form-email"><label for="email">' . __('Email', 'boot_Strap') . '</label> ' .
                        ( $req ? '<span class="required">*</span>' : '' ) .
                        '<input class="" id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) .
                        '" size="30"' . $aria_req . ' /></p>',
                        'url' =>
-                       '<p class="comment-form-url"><label for="url">' . __('Website', 'domainreference') . '</label>' .
+                       '<p class="comment-form-url"><label for="url">' . __('Website', 'boot_Strap') . '</label>' .
                        '<input class="" id="url" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) .
                        '" size="30" /></p>',
                    );
-            $comment_field = '<p class="comment-form-comment"><label for="comment">' . _x('Comment', 'noun') . '</label><br /><textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
+            $comment_field = '<p class="comment-form-comment"><label for="comment">' . __('Comment', 'boot_Strap') . '</label><br /><textarea class="form-control" id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
             
             $new_defaults = array(
                 'fields' => apply_filters( 'comment_form_default_fields',$fields),
