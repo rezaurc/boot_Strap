@@ -8,12 +8,15 @@
  */
 
 /**
- * The great thematic theme browser oand Oparating System class (Thanks to thematic) 
+ * The great thematic theme browser oand Oparating System class (Thanks to thematic)
+ * The Thematic Theme is copyright Ian Stewart http://themeshaper.com/ 
  * thematic_browser_class_names function.
  */
 function thematic_browser_class_names($classes) {
 	// add 'class-name' to the $classes array
 	// $classes[] = 'class-name';
+            //add loading on init
+            $classes[]='loading';
 	$browser = $_SERVER[ 'HTTP_USER_AGENT' ];
 		
 	// Mac, PC ...or Linux

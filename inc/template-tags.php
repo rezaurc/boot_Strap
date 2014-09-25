@@ -33,9 +33,17 @@ function boot_Strap_paging_nav($pages = '', $range = 2) {
 	<nav class="navigation paging-navigation text-center" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'boot_Strap' ); ?></h1>
 		<ul class="nav-links pagination">
-
+                                            <?php
+                        if(is_rtl()){
+                          $arrow_older = 'fa-angle-right';
+                          $arrow_newer = 'fa-angle-left';
+                        }else{
+                          $arrow_older = 'fa-angle-left';   
+                          $arrow_newer = 'fa-angle-right';
+                        }     
+                    ?>
 			<?php if ( get_next_posts_link() ) : ?>
-			<li class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav fa fa-angle-left"></span> Older posts', 'boot_Strap' ) ); ?></li>
+			<li class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav fa '.$arrow_older.'"></span> Older posts', 'boot_Strap' ) ); ?></li>
 			<?php endif; ?>
                         <?php if(1 != $pages): 
                             for ($i=1; $i <= $pages; $i++)
@@ -51,7 +59,7 @@ function boot_Strap_paging_nav($pages = '', $range = 2) {
                         
                         <?php endif; ?>    
 			<?php if ( get_previous_posts_link() ) : ?>
-			<li class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav fa fa-angle-right"></span>', 'boot_Strap' ) ); ?></li>
+			<li class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav fa '.$arrow_newer.'"></span>', 'boot_Strap' ) ); ?></li>
 			<?php endif; ?>
 
 		</ul<!-- .nav-links -->
@@ -74,13 +82,20 @@ function boot_Strap_post_nav() {
 	if ( ! $next && ! $previous ) {
 		return;
 	}
+          if(is_rtl()){
+              $arrow_pre = '&rarr;';
+              $arrow_nex = '&larr;';
+            }else{
+              $arrow_pre = '&larr;';   
+              $arrow_nex = '&rarr;';
+            } 
 	?>
 	<nav class="navigation post-navigation text-center" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'boot_Strap' ); ?></h1>
 		<ul class="nav-links pager">
 			<?php
-				previous_post_link( '<li class="nav-previous previous">%link</li>', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'boot_Strap' ) );
-				next_post_link(     '<li class="nav-next next">%link</li>',     _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'boot_Strap' ) );
+				previous_post_link( '<li class="nav-previous previous">%link</li>', _x( '<span class="meta-nav">'.$arrow_pre.'</span> %title', 'Previous post link', 'boot_Strap' ) );
+				next_post_link(     '<li class="nav-next next">%link</li>',     _x( '%title <span class="meta-nav">'.$arrow_nex.'</span>', 'Next post link',     'boot_Strap' ) );
 			?>
 		</ul><!-- .nav-links -->
 	</nav><!-- .navigation -->

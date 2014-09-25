@@ -147,18 +147,27 @@ if (!function_exists('boot_Strap_child_header_topbar')){
  * Enqueue scripts and styles.
  */
 function boot_Strap_scripts() {
-    wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css');
+    //rtl bootstrap
+    if ( is_rtl() ) {
     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all');
-    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), false, 'all');
+    wp_enqueue_style('bootstrap-rtl', get_template_directory_uri() . '/css/bootstrap-rtl.min.css', array(), false, 'all');     
+    wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css');
+    }else{
+     wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all');   
+     wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css');
+     
+    }
    // wp_enqueue_script('modernizr', '//modernizr.com/downloads/modernizr-latest.js', array());    
     //load theme style file after bootstrap style 
     wp_enqueue_style( 'boot_Strap-style', get_stylesheet_uri() );
 
     //wp_enqueue_script('boot_Strap-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true);
+    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), false, 'all');
     wp_enqueue_script('boot_Strap-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '20120206', true);
     wp_enqueue_script('boot_Strap-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
     wp_enqueue_script('smartmenu-core', get_template_directory_uri() . '/js/jquery.smartmenus.min.js', array('jquery'));
     wp_enqueue_script('smartmenu', get_template_directory_uri() . '/js/jquery.smartmenus.bootstrap.min.js', array('jquery','smartmenu-core'), '', true);
+    
    
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -198,11 +207,17 @@ function boot_Strap_custom_walker( $args ) {
    
 if( 'primary' == $args['theme_location'] )
 	{
+           
+            if(is_rtl()){
+             $mnuclass ='nav navbar-nav navbar-right' ;
+            }else{
+             $mnuclass = 'nav navbar-nav';  
+            }
 		$bSwalker =  new wp_bootstrap_navwalker();
                 
 		$args['container'] = 'div';
                 $args['container_class'] = 'collapse navbar-collapse navbar-responsive-collapse';
-                $args['menu_class'] = 'nav navbar-nav';
+                $args['menu_class'] = $mnuclass;
                 if(!has_nav_menu('primary')){
 		$args['fallback_cb'] = $bSwalker->fallback($args);
                 }  else {
