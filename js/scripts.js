@@ -16,34 +16,21 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-    var elm = document.getElementsByTagName('table');
-        $num = elm.length;
-        if($num >= 1 ){
-        for (var i = 0; i < $num; i++){
-            elm[i].setAttribute('class', 'table table-bordered');
-           // elm.className = 'table';
-        }
-    }else{
-        //Do the Golden
-   }
-      //  console.log($num);
-    var bdyInput = document.getElementsByTagName('input');
-    var fldNum = bdyInput.length;
-        if(fldNum >= 1){
-            for(var i = 0; i < fldNum; i++){
-                var fldTyp = bdyInput[i].getAttributeNode('type');
-                //console.log(fldTyp.value);
-                if(fldTyp.value === 'password' || fldTyp.value === 'text' || fldTyp.value === 'email' || fldTyp.value === 'url'){
-                bdyInput[i].classList.toggle('form-control');
-                }else if(fldTyp.value === 'submit'){
-                 //bdyInput[i].classList.toggle('btn btn-default');   
-                 bdyInput[i].setAttribute('class', 'btn btn-default');
-                }
+ var bdyElms = document.querySelectorAll('textarea, select, input, table');
+ var elmsNum = bdyElms.length;
+  if(elmsNum >= 1  ){
+       for(var i = 0; i < elmsNum; i++){
+           console.log(bdyElms[i].localName);
+            if(bdyElms[i].type === 'submit'){
+              bdyElms[i].setAttribute('class', 'btn btn-default');  
+            }else if(bdyElms[i].localName === 'table'){
+              bdyElms[i].setAttribute('class', 'table table-bordered');   
             }
-        }else{
-           //Do the Golden
+            else{
+              bdyElms[i].setAttribute('class', 'form-control'); 
             }
-
+       }
+  }
 
 //GLOBALS
 jQuery(document).ready(function () {    
@@ -63,5 +50,5 @@ jQuery(document).ready(function () {
     $( 'table#wp-calendar' ).addClass( 'table table-striped');
     
     //show time
-    $(document.body).show(); 
+    $(document.body).removeClass('loading').delay(800).fadeIn(1400);
 });

@@ -4,7 +4,7 @@ Theme URI: http://rezaur.com/boot-strap
 Author: Rezaur Chowdhury
 Author URI: http://www.rezaur.com
 Description: Theme is based on _s by Auttomatic. I just got it married with twitter bootstrap 3 and added some extra.
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: boot_Strap
@@ -21,13 +21,13 @@ This theme, like WordPress, is licensed under the GPL.
 * to make sidebar-content (left sidebar) uncomment content-area
 * to make this change for any specific page use the page slug as css class and add below code
 */
-/* for all page*/
+/* if you want default page template to left sidebar uncomment below*/
 /*
 .content-area {
     float: right;
 }
 */
-/*for a specific page. Exm:- sample-page is the slug of Sample page Come with WordPress Default install*/
+/*To make a specific page layout left sidebar. Exm:- sample-page (is the slug of Sample page, Comes with WordPress Default install)*/
 .sample-page .content-area{
     float: right;
 }
@@ -35,7 +35,9 @@ This theme, like WordPress, is licensed under the GPL.
 *{
     /* border-radius: 0 !important;*/
 }
-
+.loading{
+    display: none;
+}
 /* Alignment */
 .alignleft {
 	display: inline;
@@ -157,7 +159,7 @@ input[type="text"]{
     
 }
 textArea{
-    width: 98%;
+  
 }
 
 /* Asides */

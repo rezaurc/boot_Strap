@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> style="display: none;">
+<body <?php body_class(); ?>>
 <div id="page" class="hfeed site container-fluid">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">

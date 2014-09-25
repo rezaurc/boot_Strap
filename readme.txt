@@ -23,3 +23,9 @@ Copyright by Author
 SmartMenus jQuery Plugin - v0.9.6
 Copyright 2014 Vasil Dinkov, Vadikom Web Ltd.
 Licensed MIT
+
+GLYPHICONS FREE
+Copyright by GLYPHICONS.com
+Licensed under Creative Commons Attribution 3.0 Unported (CC BY 3.0).
+http://creativecommons.org/licenses/by/3.0/
+
