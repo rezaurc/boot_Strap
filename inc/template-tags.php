@@ -43,7 +43,7 @@ function boot_Strap_paging_nav($pages = '', $range = 2) {
                         }     
                     ?>
 			<?php if ( get_next_posts_link() ) : ?>
-			<li class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav fa '.$arrow_older.'"></span> Older posts', 'boot_Strap' ) ); ?></li>
+			<li class="nav-previous"><?php next_posts_link( '<span class="meta-nav fa '.$arrow_older.'"></span>&nbsp;' .__('Older posts', 'boot_Strap' ) ); ?></li>
 			<?php endif; ?>
                         <?php if(1 != $pages): 
                             for ($i=1; $i <= $pages; $i++)
@@ -59,7 +59,7 @@ function boot_Strap_paging_nav($pages = '', $range = 2) {
                         
                         <?php endif; ?>    
 			<?php if ( get_previous_posts_link() ) : ?>
-			<li class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav fa '.$arrow_newer.'"></span>', 'boot_Strap' ) ); ?></li>
+			<li class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'boot_Strap' ). '&nbsp;<span class="meta-nav fa '.$arrow_newer.'"></span>'); ?></li>
 			<?php endif; ?>
 
 		</ul<!-- .nav-links -->
@@ -94,8 +94,8 @@ function boot_Strap_post_nav() {
 		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'boot_Strap' ); ?></h1>
 		<ul class="nav-links pager">
 			<?php
-				previous_post_link( '<li class="nav-previous previous">%link</li>', _x( '<span class="meta-nav">'.$arrow_pre.'</span> %title', 'Previous post link', 'boot_Strap' ) );
-				next_post_link(     '<li class="nav-next next">%link</li>',     _x( '%title <span class="meta-nav">'.$arrow_nex.'</span>', 'Next post link',     'boot_Strap' ) );
+				previous_post_link( '<li class="nav-previous previous">%link</li>', '<span class="meta-nav">'.$arrow_pre.'</span> %title', __( 'Previous post link', 'boot_Strap' ) );
+				next_post_link( '<li class="nav-next next">%link</li>', '%title <span class="meta-nav">'.$arrow_nex.'</span>',  __('Next post link', 'boot_Strap' ) );
 			?>
 		</ul><!-- .nav-links -->
 	</nav><!-- .navigation -->
