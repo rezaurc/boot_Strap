@@ -21,8 +21,10 @@
   if(elmsNum >= 1  ){
        for(var i = 0; i < elmsNum; i++){
            console.log(bdyElms[i].localName);
-            if(bdyElms[i].type === 'submit'){
+            if(bdyElms[i].type === 'submit' || bdyElms[i].type === 'reset'){
               bdyElms[i].setAttribute('class', 'btn btn-default');  
+            }else if(bdyElms[i].type === 'checkbox' || bdyElms[i].type === 'radio'){
+                 bdyElms[i].setAttribute('class', '');   
             }else if(bdyElms[i].localName === 'table'){
               bdyElms[i].setAttribute('class', 'table table-bordered');   
             }

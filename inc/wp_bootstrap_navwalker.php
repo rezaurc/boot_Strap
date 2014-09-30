@@ -208,7 +208,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
             echo $fb_output;
         }else{
 			extract( $args );
-			wp_page_menu(array( 'depth'=> '1','show_home' => True, 'sort_column' => 'post_name', 'menu_class'=> $menu_class. ' fallbackmenu'));
+			wp_page_menu(array( 'depth'=> '1','show_home' => True, 'sort_column' => 'post_name', 'menu_class'=> $menu_class. ' collapse navbar-collapse navbar-responsive-collapse fallbackmenu'));
 		}
     }
 
