@@ -6,9 +6,12 @@ License: GNU General Public License v2 or later
 (C) 2012-2014 Automattic, Inc.
 
 The Bootstrap framework
+(Included GLYPHICONS)
 Bootstrap v3.2.0 (http://getbootstrap.com)
 Copyright 2011-2014 Twitter, Inc.
 License:The MIT License (MIT)
+Details Of glyphicons can be found 
+http://glyphicons.com/license/
 
 wp_bootstrap_navwalker
 Author: Edward McIntyre - @twittem
