@@ -7,7 +7,7 @@ Description: Theme is based on _s by Auttomatic. I just got it married with twit
 With help of JavaScript and html5 the boot_Strap theme have responsive Table, Input fields (submit, reset, password, tel, date etc), that works same as Bootstrap default theme.
 The menu walker is customized to support fallback menu and that too have bootstrap menu properties. The right to left (rtl) support of the theme is notable as user can readily use menu and even the arrows in page/post navigation. Latest font awesome ready to use with just css class call.
 Overall it's a great theme to start with for a developer like me.
-Version: 1.0.7
+Version: 1.0.8
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: boot_Strap
@@ -43,47 +43,47 @@ This theme, like WordPress, is licensed under the GPL.
 }
 /* Alignment */
 .alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
 }
 .alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
 }
 .aligncenter {
-	clear: both;
-	display: block;
-	margin: 0 auto;
+    clear: both;
+    display: block;
+    margin: 0 auto;
 }
 
 
 /* Text meant only for screen readers */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
 }
 
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar */
 }
 
 /* Clearing */
@@ -99,8 +99,8 @@ This theme, like WordPress, is licensed under the GPL.
 .site-content:after,
 .site-footer:before,
 .site-footer:after {
-	content: '';
-	display: table;
+    content: '';
+    display: table;
 }
 
 .clear:after,
@@ -109,31 +109,31 @@ This theme, like WordPress, is licensed under the GPL.
 .site-header:after,
 .site-content:after,
 .site-footer:after {
-	clear: both;
+    clear: both;
 }
 
 .sticky {
 }
 .hentry {
-	margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 .byline,
 .updated {
-	display: none;
+    display: none;
 }
 .single .byline,
 .group-blog .byline {
-	display: inline;
+    display: inline;
 }
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+    margin: 1.5em 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 1.5em;
+    clear: both;
+    margin: 0 0 1.5em;
 }
 
 blockquote, .blockquote, blockquote p{
@@ -149,38 +149,38 @@ blockquote cite, .blockquote .cite{
     font-weight: normal;
 }
 img{
-  display: block;
-  width: 100% \9;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    width: 100% \9;
+    max-width: 100%;
+    height: auto;
 }
 .panel-heading>.entry-title>a{
-   font-size: 20px;
+    font-size: 20px;
 }
 /* Extra (imput field out side form tag) */
 input[type="text"]{
-    
+
 }
 textArea{
-  
+
 }
 
 /* Asides */
 .search-form label{
-   float: left;
-   margin-right: 5px;
+    float: left;
+    margin-right: 5px;
 }
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+    display: none;
 }
 /* Main Navigation*/
 /*Fallback Menu*/
 .fallbackmenu ul{
-   float: left; 
-   margin: 0;
-   padding-left: 0;
-   list-style: none;
+    float: left; 
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
 }
 .fallbackmenu>ul>li{
     float: left;
@@ -208,65 +208,65 @@ textArea{
 */
 /* sub menus arrows */
 .navbar-nav .sub-arrow, .navbar-nav .collapsible .sub-arrow {
-	position:static;
-	margin-top:0;
-	margin-right:0;
-	margin-left:6px;
-	display:inline-block;
-	width:0;
-	height:0;
-	overflow:hidden;
-	vertical-align:middle;
-	border-top:4px solid;
-	border-right:4px dashed transparent;
-	border-bottom:4px dashed transparent;
-	border-left:4px dashed transparent;
+    position:static;
+    margin-top:0;
+    margin-right:0;
+    margin-left:6px;
+    display:inline-block;
+    width:0;
+    height:0;
+    overflow:hidden;
+    vertical-align:middle;
+    border-top:4px solid;
+    border-right:4px dashed transparent;
+    border-bottom:4px dashed transparent;
+    border-left:4px dashed transparent;
 }
 .navbar-fixed-bottom .sub-arrow {
-	margin-top:-5px;
-	border-top:4px dashed transparent;
-	border-bottom:4px solid;
+    margin-top:-5px;
+    border-top:4px dashed transparent;
+    border-bottom:4px solid;
 }
 .navbar-nav ul .sub-arrow {
-	position:absolute;
-	right:0;
-	margin-top:6px;
-	margin-right:15px;
-	border-top:4px dashed transparent;
-	border-bottom:4px dashed transparent;
-	border-left:4px solid;
+    position:absolute;
+    right:0;
+    margin-top:6px;
+    margin-right:15px;
+    border-top:4px dashed transparent;
+    border-bottom:4px dashed transparent;
+    border-left:4px solid;
 }
 .navbar-nav ul a.has-submenu {
-	padding-right:30px;
+    padding-right:30px;
 }
 /* scrolling arrows for tall menus */
 .navbar-nav span.scroll-up, .navbar-nav span.scroll-down {
-	position:absolute;
-	display:none;
-	visibility:hidden;
-	height:20px;
-	overflow:hidden;
-	text-align:center;
+    position:absolute;
+    display:none;
+    visibility:hidden;
+    height:20px;
+    overflow:hidden;
+    text-align:center;
 }
 .navbar-nav span.scroll-up-arrow, .navbar-nav span.scroll-down-arrow {
-	position:absolute;
-	top:-2px;
-	left:50%;
-	margin-left:-8px;
-	width:0;
-	height:0;
-	overflow:hidden;
-	border-top:7px dashed transparent;
-	border-right:7px dashed transparent;
-	border-bottom:7px solid;
-	border-left:7px dashed transparent;
+    position:absolute;
+    top:-2px;
+    left:50%;
+    margin-left:-8px;
+    width:0;
+    height:0;
+    overflow:hidden;
+    border-top:7px dashed transparent;
+    border-right:7px dashed transparent;
+    border-bottom:7px solid;
+    border-left:7px dashed transparent;
 }
 .navbar-nav span.scroll-down-arrow {
-	top:6px;
-	border-top:7px solid;
-	border-right:7px dashed transparent;
-	border-bottom:7px dashed transparent;
-	border-left:7px dashed transparent;
+    top:6px;
+    border-top:7px solid;
+    border-right:7px dashed transparent;
+    border-bottom:7px dashed transparent;
+    border-left:7px dashed transparent;
 }
 #secondary .nav>li{
     display:block;
@@ -278,7 +278,7 @@ textArea{
     margin-left: 10px;
 }
 #secondary .nav>li ul li:last-child{
-   border-bottom: 0px dotted;  
+    border-bottom: 0px dotted;  
 }
 
 #secondary .nav>li>a{
@@ -292,31 +292,31 @@ textArea{
 /* add more indentation for 2+ level sub in collapsible mode - Bootstrap normally supports just 1 level sub menus */
 .navbar-nav .collapsible ul .dropdown-menu > li > a,
 .navbar-nav .collapsible ul .dropdown-menu .dropdown-header {
-	padding-left:35px;
+    padding-left:35px;
 }
 .navbar-nav .collapsible ul ul .dropdown-menu > li > a,
 .navbar-nav .collapsible ul ul .dropdown-menu .dropdown-header {
-	padding-left:45px;
+    padding-left:45px;
 }
 .navbar-nav .collapsible ul ul ul .dropdown-menu > li > a,
 .navbar-nav .collapsible ul ul ul .dropdown-menu .dropdown-header {
-	padding-left:55px;
+    padding-left:55px;
 }
 .navbar-nav .collapsible ul ul ul ul .dropdown-menu > li > a,
 .navbar-nav .collapsible ul ul ul ul .dropdown-menu .dropdown-header {
-	padding-left:65px;
+    padding-left:65px;
 }
 /* fix SmartMenus sub menus auto width (subMenusMinWidth and subMenusMaxWidth options) */
 .navbar-nav .dropdown-menu > li > a {
-	white-space:normal;
+    white-space:normal;
 }
 .navbar-nav ul.sm-nowrap > li > a {
-	white-space:nowrap;
+    white-space:nowrap;
 }
 /* fix .navbar-right subs alignment */
 .navbar-right ul.dropdown-menu {
-	left:0;
-	right:auto;
+    left:0;
+    right:auto;
 }
 /* The following will make the sub menus collapsible for small screen devices (it's not recommended editing these) */
 .navbar-nav .collapsible ul {display:none;position:static !important;top:auto !important;left:auto !important;margin-left:0 !important;margin-top:0 !important;width:auto !important;min-width:0 !important;max-width:none !important;}
@@ -330,38 +330,38 @@ ul.sm li *,ul.sm li *:before,ul.sm li *:after{-moz-box-sizing:content-box;-webki
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
 }
 .wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+    margin-bottom: 1.5em;
+    max-width: 100%;
 }
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 1.2% auto 0;
-	max-width: 98%;
+    display: block;
+    margin: 1.2% auto 0;
+    max-width: 98%;
 }
 .wp-caption-text {
-	text-align: center;
+    text-align: center;
 }
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+    margin: 0.8075em 0;
 }
 .site-main .gallery {
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 .gallery-caption {
 }
 .site-main .gallery a img {
-	border: none;
-	height: auto;
-	max-width: 90%;
+    border: none;
+    height: auto;
+    max-width: 90%;
 }
 .site-main .gallery dd {
-	margin: 0;
+    margin: 0;
 }
 .site-main .gallery-columns-4 .gallery-item {
 }
@@ -374,13 +374,13 @@ ul.sm li *,ul.sm li *:before,ul.sm li *:after{-moz-box-sizing:content-box;-webki
 embed,
 iframe,
 object {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 /* Comments */
 
 .comment-content a {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
 .bypostauthor {
 }
@@ -397,17 +397,17 @@ object {
 /* Widgets*/
 
 .widget {
-	margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 
 /* Make sure select elements fit in widgets */
 .widget select {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 /* Search widget */
 .widget_search .search-submit {
-	display: none;
+    display: none;
 }
 /* Entry Meta */
 
@@ -418,7 +418,7 @@ object {
 .sticky.format-chat .entry-meta .date,
 .sticky.format-image .entry-meta .date,
 .sticky.format-gallery .entry-meta .date {
-	display: none;
+    display: none;
 }
 .single article footer.entry-meta{
     margin: 0.5em 0 0;
@@ -427,200 +427,200 @@ object {
 /* Attachments */
 
 .attachment .hentry {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .attachment .entry-header {
-	margin-bottom: 0;
-	max-width: 1040px;
-	padding: 30px 0;
+    margin-bottom: 0;
+    max-width: 1040px;
+    padding: 30px 0;
 }
 
 .attachment .entry-title {
-	display: inline-block;
-	float: left;
-	font: 300 italic 30px "Source Sans Pro", Helvetica, sans-serif;
-	margin: 0;
+    display: inline-block;
+    float: left;
+    font: 300 italic 30px "Source Sans Pro", Helvetica, sans-serif;
+    margin: 0;
 }
 
 .attachment .entry-title:before {
-	content: "\f416";
-	font-size: 32px;
-	margin-right: 10px;
+    content: "\f416";
+    font-size: 32px;
+    margin-right: 10px;
 }
 
 .attachment .entry-meta {
-	clear: none;
-	color: inherit;
-	float: right;
-	max-width: 604px;
-	padding: 9px 0 0;
-	text-align: right;
+    clear: none;
+    color: inherit;
+    float: right;
+    max-width: 604px;
+    padding: 9px 0 0;
+    text-align: right;
 }
 
 .hentry.attachment:not(.image-attachment) .entry-meta {
-	max-width: 104px;
+    max-width: 104px;
 }
 .hentry .entry-header>.entry-meta{
     max-width: 100% !important;
 }
 .attachment footer.entry-meta {
-	display: none;
+    display: none;
 }
 
 .attachment-meta:before {
-	content: "\f307";
+    content: "\f307";
 }
 
 .full-size-link a:before {
-	content: "\f402";
+    content: "\f402";
 }
 
 .full-size-link:before {
-	content: none;
+    content: none;
 }
 
 .attachment .entry-content {
-	max-width: 100%;
-	padding: 40px 0;
+    max-width: 100%;
+    padding: 40px 0;
 }
 
 .image-navigation {
-	margin: 0 auto;
-	max-width: 1040px;
-	position: relative;
+    margin: 0 auto;
+    max-width: 1040px;
+    position: relative;
 }
 
 .image-navigation a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .image-navigation .nav-previous,
 .image-navigation .nav-next {
-	position: absolute;
-	top: 50px;
+    position: absolute;
+    top: 50px;
 }
 
 .image-navigation .nav-previous {
-	left: 0;
+    left: 0;
 }
 
 .image-navigation .nav-next {
-	right: 0;
+    right: 0;
 }
 
 .image-navigation .meta-nav {
-	font-size: 32px;
-	font-weight: 300;
-	vertical-align: -4px;
+    font-size: 32px;
+    font-weight: 300;
+    vertical-align: -4px;
 }
 
 .attachment .entry-attachment,
 .attachment .type-attachment p {
-	margin: 0 auto;
-	max-width: 724px;
-	text-align: center;
+    margin: 0 auto;
+    max-width: 724px;
+    text-align: center;
 }
 
 .attachment .entry-attachment .attachment {
-	display: inline-block;
+    display: inline-block;
 }
 
 .attachment .entry-caption {
-	text-align: left;
+    text-align: left;
 }
 
 .attachment .entry-description {
-	margin: 20px auto 0;
-	max-width: 604px;
+    margin: 20px auto 0;
+    max-width: 604px;
 }
 
 .attachment .entry-caption p:last-child,
 .attachment .entry-description p:last-child {
-	margin: 0;
+    margin: 0;
 }
 
 .attachment .site-main .sidebar-container {
-	display: none;
+    display: none;
 }
 
 .attachment .entry-content .mejs-audio {
-	max-width: 400px;
-	margin: 0 auto;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .attachment .entry-content .wp-video {
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 .attachment .entry-content .mejs-container {
-	margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 
 /* Author Bio */
 
 .author-info {
-	margin: 0 auto;
-	max-width: 604px;
-	padding: 30px 0 10px;
-	text-align: left; /* gallery & video post formats */
-	width: 100%;
+    margin: 0 auto;
+    max-width: 604px;
+    padding: 30px 0 10px;
+    text-align: left; /* gallery & video post formats */
+    width: 100%;
 }
 
 .author.sidebar .author-info {
-	max-width: 1040px;
-	padding: 30px 376px 10px 60px;
+    max-width: 1040px;
+    padding: 30px 376px 10px 60px;
 }
 
 .single .author-info {
-	padding: 50px 0 0;
+    padding: 50px 0 0;
 }
 
 .author-avatar .avatar {
-	float: left;
-	margin: 0 30px 30px 0;
+    float: left;
+    margin: 0 30px 30px 0;
 }
 .author-description .author-title {
-	clear: none;
-	font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
-	margin: 0 0 8px;
+    clear: none;
+    font: 300 italic 20px "Source Sans Pro", Helvetica, sans-serif;
+    margin: 0 0 8px;
 }
 
 .author-link {
-	margin-left: 2px;
+    margin-left: 2px;
 }
 
 .author.archive .author-link {
-	display: none;
+    display: none;
 }
 /* 404 */
 
 .error404 .page-title {
-	line-height: 0.6;
-	margin: 0;
-	padding: 300px;
-	position: relative;
-	text-align: center;
-	width: auto;
+    line-height: 0.6;
+    margin: 0;
+    padding: 300px;
+    position: relative;
+    text-align: center;
+    width: auto;
 }
 
 .error404 .page-title:before {
-	content: "!";
-	font-size: 964px;
-	line-height: 0.6;
-	overflow: hidden;
-	position: absolute;
-	left: 7px;
-	top: 28px;
+    content: "!";
+    font-size: 964px;
+    line-height: 0.6;
+    overflow: hidden;
+    position: absolute;
+    left: 7px;
+    top: 28px;
 }
 
 .error404 .page-header,
 .error404 .page-content {
-	margin: 0 auto;
-	max-width: 1040px;
-	padding-bottom: 40px;
-	width: 100%;
+    margin: 0 auto;
+    max-width: 1040px;
+    padding-bottom: 40px;
+    width: 100%;
 }
 
 /* =Infinite Scroll
@@ -629,12 +629,12 @@ object {
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
-	display: none;
+    display: none;
 }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
-	display: block;
+    display: block;
 }
 /*---------------------------------Comment block-------------------------------------------------*/
 .form-allowed-tags code{
