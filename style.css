@@ -642,7 +642,9 @@ object {
     white-space: pre-wrap;
     display: block;
 }
-
+.comments-area .media-left span.says, .comments-area .media-left{max-width: 74px;}
+.comments-area .media-left span.says, .comments-area .media-left cite.fn{float:left;display: block;width: 100%;max-width: 64px; word-wrap: break-word;overflow: hidden}
+.comments-area .media-left cite.fn{font-weight: bold;}
 /*---------------------------------Post Navigation-------------------------------------------------*/
 .paging-navigation{
     margin-bottom: 15px;
