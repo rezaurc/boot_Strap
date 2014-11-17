@@ -1,5 +1,5 @@
 /*!
- * SmartMenus jQuery Plugin Bootstrap Addon - v0.1.0 - March 27, 2014
+ * SmartMenus jQuery Plugin Bootstrap Addon - v0.1.1 - August 25, 2014
  * http://www.smartmenus.org/
  *
  * Copyright 2014 Vasil Dinkov, Vadikom Web Ltd.
@@ -27,6 +27,7 @@
 						collapsibleShowFunction: null,
 						collapsibleHideFunction: null,
 						rightToLeftSubMenus: $this.hasClass('navbar-right'),
+                                                showTimeout:150,
 						bottomToTopSubMenus: $this.closest('.navbar').hasClass('navbar-fixed-bottom')
 					})
 					// set Bootstrap's "active" class to SmartMenus "current" items (should someone decide to enable markCurrentItem: true)
@@ -51,13 +52,13 @@
 				'click.smapi': function(e, item) {
 					var obj = $(this).data('smartmenus');
 					if (obj.isCollapsible()) {
-				                var $item = $(item),
-				                	$sub = $item.parent().dataSM('sub');
-				                if ($sub && $sub.dataSM('shown-before') && $sub.is(':visible')) {
-				                	obj.itemActivate($item);
-				                	obj.menuHide($sub);
-				                	return false;
-				                }
+						var $item = $(item),
+							$sub = $item.parent().dataSM('sub');
+						if ($sub && $sub.dataSM('shown-before') && $sub.is(':visible')) {
+							obj.itemActivate($item);
+							obj.menuHide($sub);
+							return false;
+						}
 					}
 				}
 			});
