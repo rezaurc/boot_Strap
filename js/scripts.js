@@ -53,4 +53,21 @@ jQuery(document).ready(function () {
     
     //show time
     $(document.body).removeClass('loading').delay(800).fadeIn(1400);
+    //Back to top link smoth scroll
+	var offset = 220;
+	var duration = 500;
+	$(window).scroll(function() {
+	if ($(this).scrollTop() > offset) {
+		$('.back-to-top').fadeIn(duration);
+	} else {
+		$('.back-to-top').fadeOut(duration);
+		}
+	});
+	
+	$('.back-to-top').click(function(event) {
+	event.preventDefault();
+	$('html, body').animate({scrollTop: 0}, duration);
+	return false;
+	})
+
 });
