@@ -325,6 +325,7 @@ textArea{
 .navbar-nav .collapsible iframe{display:none;}
 /* disable Bootstrap 3's global box-sizing:border-box; for the menus as it doesn't play nice with SmartMenus */
 ul.sm li *,ul.sm li *:before,ul.sm li *:after{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}
+.mob-menu{float: left;padding: 15px;font-size: 16px}
 /* End Smart menu css */
 
 /* Media */
