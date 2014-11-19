@@ -67,7 +67,7 @@ if (!function_exists('boot_Strap_setup')) :
         ));
 
         // Enable support for Post Formats.
-        add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link'));
+        add_theme_support('post-formats', array('aside', 'image', 'video', 'quote', 'link', 'gallery'));
 
         // This theme styles the visual editor to resemble the theme style.
         add_editor_style(array('css/wp-editor-style.css'));
@@ -79,7 +79,7 @@ if (!function_exists('boot_Strap_setup')) :
         )));
 
         // Enable support for HTML5 markup.
-        add_theme_support('html5', array('comment-list', 'search-form', 'comment-form',));
+        add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption',));
 
         //woo commerce support
         add_theme_support('woocommerce');

@@ -20,7 +20,7 @@
  var elmsNum = bdyElms.length;
   if(elmsNum >= 1  ){
        for(var i = 0; i < elmsNum; i++){
-           console.log(bdyElms[i].localName);
+         //  console.log(bdyElms[i].localName);
             if(bdyElms[i].type === 'submit' || bdyElms[i].type === 'reset'){
               bdyElms[i].setAttribute('class', 'btn btn-default');  
             }else if(bdyElms[i].type === 'checkbox' || bdyElms[i].type === 'radio'){

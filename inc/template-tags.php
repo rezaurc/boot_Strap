@@ -120,7 +120,7 @@ function boot_Strap_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'boot_Strap' ),
+	printf( __( '<span class="posted-on"><i class="fa fa-calendar"></i> <span class="visible-lg-inline">Posted on</span> %1$s</span><span class="byline"><i class="fa fa-user"></i> <span class="visible-lg-inline">by</span> %2$s</span>', 'boot_Strap' ),
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string

@@ -125,6 +125,7 @@ This theme, like WordPress, is licensed under the GPL.
 .group-blog .byline {
     display: inline;
 }
+.byline, .tags-links, span.comments-link{margin-left: 10px;}
 .page-content,
 .entry-content,
 .entry-summary {

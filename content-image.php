@@ -43,7 +43,7 @@
 				if ( $categories_list && boot_Strap_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-                            <i class="fa fa-folder-open"></i> <?php printf( __( 'Posted in %1$s', 'boot_Strap' ), $categories_list ); ?>
+				<?php printf( __( 'Posted in %1$s', 'boot_Strap' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
@@ -53,22 +53,13 @@
 				if ( $tags_list ) :
 			?>
 			<span class="tags-links">
-			 <i class="fa fa-tag"></i> <?php printf( __( 'Tagged %1$s', 'boot_Strap' ), $tags_list ); ?>
+				<?php printf( __( 'Tagged %1$s', 'boot_Strap' ), $tags_list ); ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
 
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-		<span class="comments-link"><?php 
-                $css_class = 'zero-comments';
-                $number    = (int) get_comments_number( get_the_ID() );
-
-                if ( 1 === $number )
-                    $css_class = "fa fa-comment";
-                elseif ( 1 < $number )
-                    $css_class = "fa fa-comments";
-                echo '<i' . ((!empty($css_class)) ? ' class="' . esc_attr( $css_class ) . '"' : '') . '></i> ';
-                comments_popup_link( __( 'Leave a comment', 'boot_Strap' ), __( '1 Comment', 'boot_Strap' ), __( '% Comments', 'boot_Strap' ) ); ?></span>
+		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'boot_Strap' ), __( '1 Comment', 'boot_Strap' ), __( '% Comments', 'boot_Strap' ) ); ?></span>
 		<?php endif; ?>
 
 		<?php edit_post_link( __( 'Edit', 'boot_Strap' ), '<span class="edit-link">', '</span>' ); ?>
