@@ -217,3 +217,7 @@ function boot_Strap_comment_structure($comment, $args, $depth) {
 	<?php endif; ?>
 <?php
 }
+function boot_Strap_excerpt_more( $more ) {
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Continue...', 'boot_Strap') . '</a>';
+}
+add_filter( 'excerpt_more', 'boot_Strap_excerpt_more' );

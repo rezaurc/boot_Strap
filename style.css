@@ -651,6 +651,15 @@ object {
 .paging-navigation{
     margin-bottom: 15px;
 }
+/*-------read more------*/
+.read-more{
+  font-weight: bold;  
+}
+/*Post navigation alignment fix for small devices*/
+@media (max-device-width: 480px) and (orientation:portrait) {
+    .pager .previous>a, .pager .previous>span, .pager .next>a, .pager .next>span{float: none;margin:5px 0}
+}
+/*----------------------Bact to top Button------------------------------*/
 .back-to-top {
 	position: fixed;
 	bottom: 2em;

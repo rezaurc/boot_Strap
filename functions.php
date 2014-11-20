@@ -152,6 +152,10 @@ function boot_Strap_scripts() {
         wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all');
         wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css');
     }
+    if(is_home() || is_front_page()){
+        wp_enqueue_style('front-page-style', get_template_directory_uri() . '/css/front-page-style.css');
+        wp_enqueue_style( 'bootstrap-lato', boot_Strap_fonts_url(), array(), null );
+    }
     // wp_enqueue_script('modernizr', '//modernizr.com/downloads/modernizr-latest.js', array());
     //load theme style file after bootstrap style
     wp_enqueue_style('boot_Strap-style', get_stylesheet_uri());
@@ -221,3 +225,32 @@ function boot_Strap_custom_walker($args) {
 }
 
 add_filter('wp_nav_menu_args', 'boot_Strap_custom_walker');
+
+/**
+ * Register Google Fonts
+ * @since 1.0.9
+ */
+function boot_Strap_fonts_url() {
+    $fonts_url = '';
+
+    /* Translators: If there are characters in your language that are not
+	 * supported by Lato, translate this to 'off'. Do not translate
+	 * into your own language.
+	 */
+	$arimo = _x( 'on', 'Lato font: on or off', 'boot_Strap' );
+
+	if ( 'off' !== $arimo ) {
+		$font_families = array();
+		$font_families[] = 'Lato:300,400,700,300italic,400italic,700italic&subset=latin,latin-ext';
+
+		$query_args = array(
+			'family' => urlencode( implode( '|', $font_families ) ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+	}
+
+	return $fonts_url;
+
+}
