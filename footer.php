@@ -17,7 +17,7 @@
 			<span class="sep"> | </span>
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'boot_Strap' ), 'boot_Strap', '<a href="http://www.rezaur.com" rel="author">Rezaur Chowdhury</a>' ); ?>
 		</div><!-- .site-info -->
-            <a href="#" class="back-to-top"><i class="glyphicon glyphicon-chevron-up"></i><?php printf (' Back to Top','boot_Strap');?></a>
+            <a href="#" class="back-to-top"><i class="glyphicon glyphicon-chevron-up"></i><?php _e (' Back to Top','boot_Strap');?></a>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>

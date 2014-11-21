@@ -157,7 +157,7 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 endwhile; 
  wp_reset_postdata();
         }else{ ?>
-            <p><?php _e( 'Please publish some post with feature image.' ); ?></p>
+            <p><?php _e( 'Please publish some post with feature image.', 'boot_Strap' ); ?></p>
     <?php    }
 ?>
           
