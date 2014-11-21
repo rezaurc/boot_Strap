@@ -55,7 +55,7 @@ jQuery(document).ready(function () {
     $(document.body).removeClass('loading').delay(800).fadeIn(1400);
     //Back to top link smoth scroll
 	var offset = 220;
-	var duration = 800;
+	var duration = 500;
 	$(window).scroll(function() {
 	if ($(this).scrollTop() > offset) {
 		$('.back-to-top').fadeIn(duration);
